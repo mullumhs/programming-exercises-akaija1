@@ -31,6 +31,11 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            Console.WriteLine("Hello world");
+            Console.ReadLine();
+            Console.WriteLine("Goodbye");
+            Console.Beep(32676, 90000);
+            Console.ReadLine();
 
         }
     }
