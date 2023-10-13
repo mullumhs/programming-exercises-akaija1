@@ -34,7 +34,10 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
-            
+            String Name = "Akaija";
+            String name = "bridges";
+            Console.WriteLine("Hello " + Name + " and " + name.ToUpper());
+            Console.ReadLine();
 
         }
     }
