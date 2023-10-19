@@ -44,6 +44,11 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            double gerry = 6.00001;
+            bool bob = false;
+            int bary = 8;
+            Console.WriteLine("b" + bary + "g" + gerry + "f" + bob);
+            Console.ReadLine();
 
         }
     }
