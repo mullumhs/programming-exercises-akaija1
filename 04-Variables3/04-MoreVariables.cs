@@ -14,7 +14,7 @@ Main Tasks:
 
 Questions:
 1. Why were the words "year", "country", and "population" originally underlined?
-2. What is the purpose of the dollar sign ($) before the double quotes in the final message?
+2. What is the purpose of the dollar sign ($) before the double quotes in the final message? so you can use string, int and doluble in sentances
 
 Extension Tasks:
 1. Print out another statement using three or more new variables of different data types.
@@ -36,7 +36,9 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
-
+            int year = 3081;
+            string country = "Flatboard";
+            double population = 7.3284301565;
 
             // Do not edit below this line
             Console.WriteLine($"As of {year} the population of {country} was {population} billion.");
