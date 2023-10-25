@@ -51,10 +51,34 @@ namespace ProgrammingExercisesIST
             // How to input a number from the user and store it in a variable 'x'
             Console.WriteLine("Please enter a number for X:");
             double x = Convert.ToDouble(Console.ReadLine());
+           
 
             // Your code goes below here
+            Console.WriteLine("Please enter a number for Y:");
+            double y = Convert.ToDouble(Console.ReadLine());
+            
 
-        }
+            //+
+            Console.WriteLine($"{x} + {y} = {x + y}");
+            
+
+            //-
+            Console.WriteLine($"{x} - {y} = {x - y}");
+            
+
+            //Divide
+            Console.WriteLine($"{x}/{y} = {x / y}");
+            
+
+            //Times
+            Console.WriteLine($"{x} x {y} = {x * y}");
+
+            //remaider
+            Console.WriteLine($"{x} remaider {y} = {x % y}");
+
+            Console.ReadLine();
+
+        }   
     }
 }
 
