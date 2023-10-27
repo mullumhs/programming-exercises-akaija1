@@ -54,6 +54,31 @@ namespace ProgrammingExercisesIST
 
             // Your code goes below here
 
+
+            if (mark > 100)
+            {
+                Console.WriteLine("Lies");
+                Console.ReadLine();
+            }
+
+
+
+            else if (mark >= 50) 
+            { 
+                Console.WriteLine("You pass");
+                Console.ReadLine();
+            }
+
+            
+            
+            else 
+            { 
+                Console.WriteLine("Fail");
+                Console.ReadLine();
+            }
+
+            Console.ReadLine();
+
         }
     }
 }
