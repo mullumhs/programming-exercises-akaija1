@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 
 /*
 ===============================================================================
@@ -52,9 +54,56 @@ namespace ProgrammingExercisesIST
     {
         static void Main(string[] args)
         {
-            // Your code goes below here
+            
+            Console.WriteLine("Please enter a number for X:");
+            double x = Convert.ToDouble(Console.ReadLine());
 
 
+            
+            Console.WriteLine("Please enter a number for Y:");
+            double y = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("what operation would you like");
+
+            Console.WriteLine("1. For Subraction");
+
+            Console.WriteLine("2. For Add");
+
+            Console.WriteLine("3. For power");
+
+            Console.WriteLine("4. For Divide");
+
+            int operation = (Console.ReadLine());
+            
+            if (operation == 1)
+            {
+                Console.WriteLine($"{x} - {y} = {x - y} ");
+
+            }
+
+            else if (operation == 2)
+            {
+                Console.WriteLine($"{x} + {y} = {x + y} ");
+
+            }
+
+
+            else if (operation == 3)
+            {
+             
+                double res;
+                res = Math.Pow(x, y);
+                Console.WriteLine("Math.Pow(X,Y) = " + res);
+                res = Math.Pow(y, x);
+                Console.WriteLine("Math.Pow(Y,X) = " + res);
+            }
+
+            else if (operation == 4)
+            {
+                Console.WriteLine($"{x}/{y} = {ToString(x / y)} ");
+                Console.WriteLine($"{x}/{y} = {x / y} ");
+
+            }
             // Wait for any key before exiting
             Console.WriteLine();
             Console.WriteLine("Press any key to exit...");

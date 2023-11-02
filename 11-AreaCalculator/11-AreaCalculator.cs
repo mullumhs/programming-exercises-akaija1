@@ -19,7 +19,8 @@ Questions:
 2. How is the area of each shape calculated? What mathematical operations are used?
 
 Extension Tasks:
-1. Extend the program to calculate the area of other shapes and add them to the menu. E.g. Circle, trapezium.
+1. Extend the program to calculate the area of other shapes and add them to the menu. E.g. Circle, 
+m.
 
 Example:
 - Below is an example of the program's output:
@@ -50,6 +51,59 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            Console.WriteLine("Choose an Option:");
+
+            Console.WriteLine("1. Area of Circle");
+
+            Console.WriteLine("2. Area of Rectangle");
+
+            Console.WriteLine("3. Area of Triangle");
+            
+            int choice  = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                Console.Write("Enter the radius:");
+                double radius = Convert.ToDouble(Console.ReadLine());
+                double area = Math.PI * Math.Pow(radius, 2);
+                Console.WriteLine($"The are of this circle is {area}");
+                
+            }
+
+            else if (choice == 2)
+            {
+                Console.Write("Enter Width:");
+                int width = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter the Height");
+                int height = Convert.ToInt32(Console.ReadLine());
+                int area = width * height;
+                Console.WriteLine($"The are of this rectangle is {area}");
+
+                ;
+
+            }
+
+            else if (choice == 3)
+            {
+                Console.Write("Enter Length:");
+                int Length = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter Height");
+                int height = Convert.ToInt32(Console.ReadLine());
+                double area = Length * height / 2;
+                Console.WriteLine($"The are of this Triangle is {area}");
+
+
+                
+
+
+            }
+
+
+            Console.WriteLine("Press Any Key to Exit");
+            Console.ReadKey();
+
+
+
 
         }
     }
