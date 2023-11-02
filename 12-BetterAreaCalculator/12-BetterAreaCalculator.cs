@@ -50,8 +50,103 @@ namespace ProgrammingExercisesIST
         {
             // Your code goes below here
 
+            start();
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                circle();
+            }
+
+            else if (choice == 2)
+            {
+                rectangle();
+            }
+
+            else if (choice == 3)
+            {
+                triangle();
+            }
+
+
+            else if (choice == 4)
+            {
+                trapezium();
+            }
+
+            exit();
+
+
+
+
+
+
         }
+        static void start()
+        {
+            Console.WriteLine("Choose an Option:");
+
+            Console.WriteLine("1. Area of Circle");
+
+            Console.WriteLine("2. Area of Rectangle");
+
+            Console.WriteLine("3. Area of Triangle");
+            
+            Console.WriteLine("4. Area of a Trapezium");
+        }
+
+        static void circle()
+        {
+            Console.Write("Enter the radius:");
+            double radius = Convert.ToDouble(Console.ReadLine());
+            double area = Math.PI * Math.Pow(radius, 2);
+            Console.WriteLine($"The are of this circle is {area}");
+        }
+
+        static void rectangle()
+        {
+            Console.Write("Enter Width:");
+            int width = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the Height");
+            int height = Convert.ToInt32(Console.ReadLine());
+            int area = width * height;
+            Console.WriteLine($"The are of this rectangle is {area}");
+        }
+
+        static void triangle()
+        {
+            Console.Write("Enter Length:");
+            int Length = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Height");
+            int height = Convert.ToInt32(Console.ReadLine());
+            double area = Length * height / 2;
+            Console.WriteLine($"The are of this Triangle is {area}");
+        }
+
+        static void trapezium()
+        {
+            Console.Write("Enter the Top:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the Length:");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the Height:");
+            int Height = Convert.ToInt32(Console.ReadLine());  
+            double trap = (a +b) * Height ;
+            double area = trap / 2;
+            Console.WriteLine($"The are of this Trapezium is {area}");
+        }
+
+        static void exit()
+        {
+            Console.WriteLine("Press Any Key to Exit");
+            Console.ReadKey();
+        }
+
+
+
     }
+
 }
 
 /*
