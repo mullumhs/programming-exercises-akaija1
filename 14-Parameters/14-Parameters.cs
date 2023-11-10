@@ -47,10 +47,106 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Call the methods here, passing in the required arguments
+             
+            String name = Console.ReadLine();
+            SayHello(name);
+
+            Cal();
+
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            add(num);
+
+            Exit();
+
 
         }
 
         // Write your methods including parameters here
+        static void SayHello(string name)
+        {
+            Console.WriteLine($"Hello {name}");
+            Console.ReadLine();
+        }
+        static void Cal() 
+        {
+            Console.WriteLine("What do you want to do?");
+
+            Console.WriteLine("1.Add");
+
+            Console.WriteLine("2.Subtract");
+
+            Console.WriteLine("3.Divide");
+
+            Console.WriteLine("4.Times");
+
+        }
+
+        static void add(int num)
+        {
+            if (num == 1) 
+            { 
+                Console.WriteLine("First number to add?");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Second number to add");
+                int b = Convert.ToInt32(Console.ReadLine());
+                int c = a + b;
+                Console.WriteLine($"{a} + {b} = {c}");
+            }
+        
+            else if (num == 2)
+            {
+                Console.WriteLine("First number to Subtract?");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Second number to Subtract");
+                int b = Convert.ToInt32(Console.ReadLine());
+                int c = a - b;
+                Console.WriteLine($"{a} - {b} = {c}");
+            }
+            else if (num == 3)
+            {
+                Console.WriteLine("First number to Divide?");
+                double a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Second number to Divide");
+                double b = Convert.ToInt32(Console.ReadLine());
+                double c = a/b;
+                Console.WriteLine($"{a}/{b} = {c}");
+            }
+        
+            else if ( num == 4)
+            {
+                Console.WriteLine("First number to Times?");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Second number to Times");
+                int b = Convert.ToInt32(Console.ReadLine());
+                int c = a * b;
+                Console.WriteLine($"{a} X {b} = {c}");
+            }
+        
+        
+        }
+        static void Exit()
+        {
+            Console.WriteLine("Press Any Key to Exit");
+            Console.ReadKey();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
