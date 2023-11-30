@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Runtime.CompilerServices;
 
 /*
 ===============================================================================
@@ -64,18 +66,162 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Get two numbers from the user
-            int x = GetNumber();
-            int y = GetNumber();
+            
 
             // Write your code here
+            string name = Getname();
 
-            
+            Hello(name);
+
+            int call = Cal();
+
+            if (call == 1)
+            {
+                A();
+
+                int a = num4();
+
+                B();
+
+                int b = num3();
+
+                add(a, b);
+            }
+            else if (call == 2)
+            {
+                A();
+
+                int a = num4();
+
+                B();
+
+                int b = num3();
+
+                sub(a, b);
+            }
+
+            else if (call == 3)
+            {
+                A();
+
+                int a = num4();
+
+                B();
+
+                int b = num3();
+
+                divide(a, b);
+
+
+            }
+            else if (call == 4)
+            {
+                A();
+
+                int a = num4();
+
+                B();
+
+                int b = num3();
+
+                time(a, b);
+            }
+
+
+
+
+
 
             // "Exit" method is called here
             Exit();
         }
 
         // Create your functions here
+        static string Getname() 
+        { 
+            string name = Console.ReadLine();
+            return name;
+        
+        }
+        static void Hello(string name)
+        {
+            Console.WriteLine($"Hello {name}");
+        }
+
+        
+        static int Cal()
+        {
+            Console.WriteLine("What do you want to do?");
+
+            Console.WriteLine("1.Add");
+
+            Console.WriteLine("2.Subtract");
+
+            Console.WriteLine("3.Divide");
+
+            Console.WriteLine("4.Times");
+
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            return num;
+        }
+
+        static void A()
+        {
+            Console.WriteLine("First number?");
+        }
+
+        static int num4()
+        {
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            return num1;
+        }
+
+        static int num3()
+        {
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            return num2;
+        }
+
+        static void B()
+        {
+            Console.WriteLine("Second number?");
+        }
+
+        static void sub(int a, int b)
+        {
+            int C = a - b;
+
+            int d = b - a;
+
+            Console.WriteLine($"{a} - {b} = {C}");
+            Console.WriteLine($"{b} - {a} = {d}");
+
+
+
+        }
+
+        static void add(int a, int b)
+        {
+            int c = a + b;
+
+            Console.WriteLine($"{a} + {b} = {c}");
+        }
+
+        static void time(int a, int b)
+        {
+            int c = a * b;
+            Console.WriteLine($"{a} X {b} = {c}");
+        }
+
+        static void divide(int a, int b)
+        {
+            double c = a / b;
+            double d = b / a;
+            Console.WriteLine($"{a} divide {b} = {c}");
+            Console.WriteLine($"{b} divide {a} = {d}");
+        }
+
 
 
 

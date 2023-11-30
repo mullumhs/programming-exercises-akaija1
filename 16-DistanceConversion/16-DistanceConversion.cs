@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 /*
 ===============================================================================
@@ -51,12 +52,124 @@ namespace ProgrammingExercisesIST
 
             // Write your code here
 
+            choices(choice);
+
+
+
+
+
+
+
+
+
+
 
             // Wait for key press before exiting
             WaitForKeyPress();
         }
 
         // Create your functions here
+
+        static void choices(string choice)
+        {
+            if (choice == "1")
+            {
+
+                double km= Km();
+                
+                double miles = conkmtomiles(km);
+
+                Console.WriteLine($"{miles} miles");
+            }
+            else if (choice == "2")
+            {
+
+                double Miles = miles();
+                
+                double Km = conmilestokm(Miles);
+
+                Console.WriteLine($"{Km}km");
+
+
+            }
+        
+        }
+
+
+        static double conkmtomiles(double km)
+        {
+            
+            
+            double miles = km / 1.6;
+            
+            return miles;
+        }
+
+        static double Km()
+        {
+            Console.WriteLine("Enter distance (in Km) to convert");
+            double km = Convert.ToDouble(Console.ReadLine());
+            return km;
+        }
+
+        static double miles()
+        {
+            Console.WriteLine("Enter distance (in Miles) to convert");
+            
+            double miles = Convert.ToDouble(Console.ReadLine());
+           
+            return miles;
+        }
+
+        static double conmilestokm(double Miles)
+        {
+
+
+            double km = Miles * 1.6;
+
+            return km;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Remoting.Messaging;
 
 /*
 ===============================================================================
@@ -72,7 +73,122 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Write your code here
+            string choice = MainMenu();
 
+            choices(choice);
+
+
+
+
+            WaitForKeyPress();
+        }
+
+
+        static void choices(string choice)
+        {
+            if (choice == "1")
+            {
+                double cel = conCtoF();
+
+                ConvertionF(cel);
+
+
+
+
+
+
+            }
+
+            else if (choice == "2")
+            {
+                double cal = ConFtoC();
+
+                ConvertionC(cal);
+
+
+
+
+            }
+
+
+
+
+
+
+        }
+
+
+        static double conCtoF()
+        {
+            Console.WriteLine("Type in the Temperature (in Celsius) to convert");
+
+            double Cel = Convert.ToDouble(Console.ReadLine());
+
+            return Cel;
+
+
+        }
+
+        static void ConvertionF(double cel)
+        {
+            double Fair = (cel * 9/5) + 32;
+
+            Console.WriteLine($"{Fair} Fahrenheit");
+
+
+
+        }
+
+        static double ConFtoC() 
+        {
+            Console.WriteLine("Type in the Temperature (in Fahrenheit) to convert");
+
+            double cal = Convert.ToDouble(Console.ReadLine());
+
+            return cal;
+
+        }
+
+
+        static void ConvertionC(double cal)
+        {
+
+            double Fair = (cal - 32) * 5 / 9;
+            
+            Console.WriteLine($"{Fair} Celsius");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private static string MainMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("1. Celsius to Fahrenheit");
+            Console.WriteLine("2. Fahrenheit to Celsius");
+            string choice = Console.ReadLine();
+            return choice;
+        }
+        private static void WaitForKeyPress()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
     }
 }

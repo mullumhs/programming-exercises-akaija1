@@ -58,11 +58,32 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             WaitBetween("Loop to find the number 42:");
-
+            for (int i = 0; i <= 50; i++)
+            {
+                if (i == 42)
+                {
+                    Console.WriteLine("Found it");
+                }
+                else
+                { 
+                    Console.WriteLine(i);
+                }
+            }
 
 
             WaitBetween("Loop to find numbers divisible by 2:");
+            for (int b = 0; b <= 100; b++)
+            { 
+                if (b % 2 == 0)
+                {
+                    Console.WriteLine("Divisible by 2");
+                }
+                else 
+                {
+                    Console.WriteLine(b); 
+                }
 
+            }
 
 
             // Wait at end
