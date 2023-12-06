@@ -27,6 +27,22 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code here
+            string choice = RunMenuOptions();
+            
+            while (choice != "4")
+            {
+
+                Choices(choice);
+                Console.ReadLine();
+                
+                choice = RunMenuOptions();
+                
+
+            }
+
+            Console.WriteLine("GoodBye");
+
+
 
         }
 
@@ -77,6 +93,40 @@ namespace ProgrammingExercisesIST
             Console.WriteLine("Invalid Choice! Press any key to continue...");
             Console.ReadKey();
         }
+    
+        static void Choices(string choice) 
+        {
+            if (choice == "1")
+            {
+                Console.WriteLine("Perfrorming Calculations");
+                CalculateCircle();
+                Console.WriteLine("Press any key to continue...");
+            }
+            else if (choice == "2")
+            {
+                Console.WriteLine("Perfrorming Calculations");
+                CalculateRectangle();
+                Console.WriteLine("Press any key to continue...");
+            }
+
+            else if (choice == "3")
+            {
+                Console.WriteLine("Perfrorming Calculations");
+
+                CalculateTriangle();
+                Console.WriteLine("Press any key to continue...");
+            }
+
+            else
+            {
+                
+                ErrorMessage();
+            }
+
+        }
+    
+    
+    
     }
 }
 
