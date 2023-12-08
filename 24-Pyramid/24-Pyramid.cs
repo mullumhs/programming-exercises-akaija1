@@ -50,11 +50,24 @@ namespace ProgrammingExercisesIST
             int height = GetNumber("Enter a height for the pyramid", 0, 20);
 
             // Write your code here
+            for (int i = 1; i <= height; i++)
+            {
+                if (i == 1)
+                {
+
+                }
 
 
 
-            // Wait at end
-            WaitForKeyPress();
+
+
+
+
+            }
+
+
+                // Wait at end
+                WaitForKeyPress();
         }
 
         /// <summary>

@@ -13,7 +13,9 @@ namespace _36_Testing
         static void Main(string[] args)
         {
             // Write your code here
-
+            
+            
+            Console.Write(j * a);
 
 
 

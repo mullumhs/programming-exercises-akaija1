@@ -42,7 +42,33 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code here
+            for (int i = 1; i < 13; i++) 
+            {
+                Console.WriteLine();
+                for (int j = 1; j < 13; j++)
+                {
+                    int a = i * j;
 
+                    
+                    
+                    if (a <= 9)
+                    {
+                        Console.Write("   " + i * j );
+                    }
+                    else if (a <= 99)
+                    {
+                        Console.Write("  " + i * j );
+                    }
+                    
+                    else
+                    {
+                        Console.Write(" " + i * j);
+                    }
+                    
+
+
+                }
+            }
 
 
 
